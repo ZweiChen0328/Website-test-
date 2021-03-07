@@ -1,0 +1,94 @@
+﻿﻿<!DOCTYPE>
+<html>
+<head>
+ <title>回饋單</title>
+  <style>
+    #m {
+        font-family: 微軟正黑體;
+        font-weight: bold;
+       }
+  </style>
+</head>
+<script>
+ var q , w , e , r , t
+  function dis(a) {
+    if (a == 1) {
+      for (i = 0; i <= 4; i++)
+        document.getElementsByName("ip1")[i].disabled = true;
+      fb(1);
+    }
+    else if (a == 2) {
+      for (i = 0; i <= 4; i++)
+        document.getElementsByName("ip2")[i].disabled = true;
+      fb(2);
+    }
+    else if (a == 3) {
+      for (i = 0; i <= 4; i++)
+        document.getElementsByName("ip3")[i].disabled = true;
+      fb(3);
+    }
+    else if (a == 4) {
+      for (i = 0; i <= 4; i++)
+        document.getElementsByName("ip4")[i].disabled = true;
+      fb(4);
+    }
+    else {
+      for (i = 0; i <= 4; i++)
+        document.getElementsByName("ip5")[i].disabled = true;
+      fb(5);
+    }
+  }
+  function fb(b) {
+    if (b == 1)
+     q = document.getElementById("a").innerHTML = "<font size = 6 color = red face = 標楷體>感謝您的回饋！" + "</font>";
+    else if (b == 2)
+     q = document.getElementById("b").innerHTML = "<font size = 6 color = red face = 標楷體>感謝您的回饋！" + "</font>";
+    else if (b == 3)
+     q = document.getElementById("c").innerHTML = "<font size = 6 color = red face = 標楷體>感謝您的回饋！" + "</font>";
+    else if (b == 4)
+     q = document.getElementById("d").innerHTML = "<font size = 6 color = red face = 標楷體>感謝您的回饋！" + "</font>";
+    else
+     q = document.getElementById("e").innerHTML = "<font size = 6 color = red face = 標楷體>感謝您的回饋！" + "</font>";
+  }
+</script>
+ <body background = 20190515_130045.jpg style = "background-size: cover">
+  <div id = "m" style = "background-color: rgba(255, 255, 255, 0.6);">
+   <font size = "6" face = "標楷體">第1題. 請問您對於課程內容的滿意度？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip1' onclick = 'dis(1);'>非常滿意
+    <input type = radio name = 'ip1' onclick = 'dis(1);'>滿意
+    <input type = radio name = 'ip1' onclick = 'dis(1);'>普通
+    <input type = radio name = 'ip1' onclick = 'dis(1);'>不滿意
+    <input type = radio name = 'ip1' onclick = 'dis(1);'>非常不滿意
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;<span id = "a"></span><br><br>
+   <font size = "6" face = "標楷體">第2題. 請問您對於授課方式的滿意度？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip2' onclick = 'dis(2);'>非常滿意
+    <input type = radio name = 'ip2' onclick = 'dis(2);'>滿意
+    <input type = radio name = 'ip2' onclick = 'dis(2);'>普通
+    <input type = radio name = 'ip2' onclick = 'dis(2);'>不滿意
+    <input type = radio name = 'ip2' onclick = 'dis(2);'>非常不滿意
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;<span id = "b"></span><br><br>
+   <font size = "6" face = "標楷體">第3題. 請問您對於教書器材的滿意度？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip3' onclick = 'dis(3);'>非常滿意
+    <input type = radio name = 'ip3' onclick = 'dis(3);'>滿意
+    <input type = radio name = 'ip3' onclick = 'dis(3);'>普通
+    <input type = radio name = 'ip3' onclick = 'dis(3);'>不滿意
+    <input type = radio name = 'ip3' onclick = 'dis(3);'>非常不滿意
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;<span id = "c"></span><br><br>
+   <font size = "6" face = "標楷體">第4題. 請問您對於上課互動的滿意度？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip4' onclick = 'dis(4);'>非常滿意
+    <input type = radio name = 'ip4' onclick = 'dis(4);'>滿意
+    <input type = radio name = 'ip4' onclick = 'dis(4);'>普通
+    <input type = radio name = 'ip4' onclick = 'dis(4);'>不滿意
+    <input type = radio name = 'ip4' onclick = 'dis(4);'>非常不滿意
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;<span id = "d"></span><br><br>
+   <font size = "6" face = "標楷體">第5題. 請問您對於活動主題的滿意度？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip5' onclick = 'dis(5);'>非常滿意
+    <input type = radio name = 'ip5' onclick = 'dis(5);'>滿意
+    <input type = radio name = 'ip5' onclick = 'dis(5);'>普通
+    <input type = radio name = 'ip5' onclick = 'dis(5);'>不滿意
+    <input type = radio name = 'ip5' onclick = 'dis(5);'>非常不滿意
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;<span id = "e"></span><br><br>
+   <center><input type = "button" onclick = "javascript:location.href = '0-index.html'" value = "返回首頁"></input></center>
+  </div>
+</body>
+</html>

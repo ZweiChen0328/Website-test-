@@ -1,0 +1,80 @@
+﻿.menu{
+    text-align: center;
+    background-color: rgba(121, 228, 169, 0.877);
+    color: white;
+    font-family: 微軟正黑體;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+body {
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+ul {
+     margin: 0;
+     padding: 0;
+     list-style: none; //取消ul預設的內縮及樣式
+}
+    ul.drop-down-menu {
+        border: #ccc 2px solid;
+        display: inline-block;
+    }
+     ul.drop-down-menu li {
+         position: relative;
+         white-space: nowrap;
+         border-right: #ccc 2px solid;
+     }
+      ul.drop-down-menu > li {
+          float: left;
+      }
+       ul.drop-down-menu a {
+          background-color: #fff;
+          color: #333;
+          display: block;
+          padding: 0 40px;
+          text-decoration: none;
+          line-height: 50px;
+       }
+        ul.drop-down-menu a:hover {
+            background-color: #BFFFFF;
+            color: #fff; //滑鼠滑入按鈕變色
+        }
+         ul.drop-down-menu li:hover > a {
+             background-color: #B5FFFF;
+             color: #fff; //滑鼠移入次選單上層按鈕保持變色
+         }
+          ul.drop-down-menu ul {
+              border: #ccc 2px solid;
+              position: absolute;
+              left: -2px;
+              top: 100%;
+              min-width: 180px;
+          }
+
+ul.drop-down-menu ul li {
+    border-bottom: #ccc 2px solid;
+}
+    ul.drop-down-menu ul ul {
+        top: 15px;
+        left: 100%; //第三層以後的選單出現位置與第二層不同
+    }
+     ul.drop-down-menu ul {
+         left: -999px;
+         opacity: 0;
+         -webkit-transition: opacity 0.001s;
+         transition: opacity 0.001s; //隱藏次選單
+     }
+      ul.drop-down-menu li:hover > ul {
+          opacity: 1;
+          -webkit-transition: opacity 0.001s;
+          transition: opacity 0.001s;
+          left: -2px;
+          border-right: 7px; //滑鼠滑入展開次選單
+      }
+       ul.drop-down-menu li:hover > ul ul {
+           left: -999px; //滑鼠滑入之後、次選單之後的選單依舊隱藏
+       }
+        ul.drop-down-menu ul li:hover > ul {
+            left: 100%; //第二層之後的選單展開位置
+        }

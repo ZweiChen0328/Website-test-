@@ -1,0 +1,94 @@
+﻿﻿<!DOCTYPE>
+<html>
+<head>
+ <title>Q&A-文字題</title>
+  <style>
+    #a {
+        font-family: 微軟正黑體;
+        font-weight: bold;
+       }
+  </style>
+</head>
+<script>
+ var m, n, o, s = 0, fb = ["O.jpg", "X.jpg"];
+  function check(a) {
+    if (a == 1) {
+      m = document.getElementById('m').innerHTML = "<img src = " + fb[0] + " width = 60 height = 60>";
+      s += 25;
+    }
+    else if (a == 0)
+      m = document.getElementById('m').innerHTML = "<img src = " + fb[1] + " width = 60 height = 60>";
+    else if (a == 3) {
+      n = document.getElementById('n').innerHTML = "<img src = " + fb[0] + " width = 60 height = 60>";
+      s += 25;
+    }
+    else if (a == 2)
+      n = document.getElementById('n').innerHTML = "<img src = " + fb[1] + " width = 60 height = 60>";
+    else if (a == 5) {
+      o = document.getElementById('o').innerHTML = "<img src = " + fb[0] + " width = 60 height = 60>";
+      s += 25;
+    }
+    else if (a == 4)
+      o = document.getElementById('o').innerHTML = "<img src = " + fb[1] + " width = 60 height = 60>";
+    else if (a == 7) {
+      o = document.getElementById('p').innerHTML = "<img src = " + fb[0] + " width = 60 height = 60>";
+      s += 25;
+    }
+    else
+      o = document.getElementById('p').innerHTML = "<img src = " + fb[1] + " width = 60 height = 60>";
+    showS();
+  }
+  function showS(S) {
+    if (s <= 50)
+      S = document.getElementById('s').innerHTML = "<font size = 7 color = red face = 標楷體>得分 : <font color = green>" + s + "</font> 分 </font>";
+    else if (s <= 75)
+      S = document.getElementById('s').innerHTML = "<font size = 7 color = red face = 標楷體>得分 : <font color = blue>" + s + "</font> 分 </font>";
+    else
+      S = document.getElementById('s').innerHTML = "<font size = 7 color = red face = 標楷體>得分 : <font color = red>" + s + "</font> 分 </font>";
+  }
+  function dis(b) {
+    if (b == 1)
+      for (i = 0; i <= 3; i++)
+        document.getElementsByName("ip1")[i].disabled = true;
+    else if (b == 2)
+      for (i = 0; i <= 3; i++)
+        document.getElementsByName("ip2")[i].disabled = true;
+    else if (b == 3)
+      for (i = 0; i <= 3; i++)
+        document.getElementsByName("ip3")[i].disabled = true;
+    else
+      for (i = 0; i <= 3; i++)
+        document.getElementsByName("ip4")[i].disabled = true;
+  }
+</script>
+ <body background = 20190515_130045.jpg style = "background-size: cover">
+  <div id = "a" style = "background-color: rgba(255, 255, 255, 0.6);">
+   <font size = "6" face = "標楷體">第1題. 請問此圖書館在哪個縣市？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip1' onclick = 'check(0);dis(1);'>新北市
+    <input type = radio name = 'ip1' onclick = 'check(1);dis(1);'>台北市
+    <input type = radio name = 'ip1' onclick = 'check(0);dis(1);'>桃園市
+    <input type = radio name = 'ip1' onclick = 'check(0);dis(1);'>台中市
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id = 'm'></span><br><br>
+   <font size = "6" face = "標楷體">第2題. 請問此圖書館在哪個區域？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip2' onclick = 'check(3);dis(2);'>北投區
+    <input type = radio name = 'ip2' onclick = 'check(2);dis(2);'>士林區
+    <input type = radio name = 'ip2' onclick = 'check(2);dis(2);'>蘆洲區
+    <input type = radio name = 'ip2' onclick = 'check(2);dis(2);'>五股區
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id = 'n'></span><br><br>
+   <font size = "6" face = "標楷體">第3題. 請問此圖書館主要使用何種概念？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip3' onclick = 'check(4);dis(3);'>美化概念
+    <input type = radio name = 'ip3' onclick = 'check(4);dis(3);'>種樹概念
+    <input type = radio name = 'ip3' onclick = 'check(4);dis(3);'>樸素概念
+    <input type = radio name = 'ip3' onclick = 'check(5);dis(3);'>綠化概念
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id = 'o'></span><br><br>
+   <font size = "6" face = "標楷體">第4題. 請問此圖書館為以下何者圖書館？<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = radio name = 'ip4' onclick = 'check(6);dis(4);'>台北圖書館
+    <input type = radio name = 'ip4' onclick = 'check(6);dis(4);'>新北圖書館
+    <input type = radio name = 'ip4' onclick = 'check(7);dis(4);'>北投圖書館
+    <input type = radio name = 'ip4' onclick = 'check(6);dis(4);'>南投圖書館
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id = 'p'></span><br><br>
+     <span id = 's'></span><br>
+   <center><input type = "button" onclick = "javascript:location.href = '0-index.html'" value = "返回首頁"></input></center>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+﻿﻿<!DOCTYPE>
+<html>
+<head>
+ <title>Q&A-圖片題</title>
+  <style>
+    #a {
+        font-family: 微軟正黑體;
+        font-weight: bold;
+       }
+  </style>
+</head>
+<script>
+ var m, n, o, s = 1, fb = ["O.jpg", "X.jpg"];
+  function check(a) {
+    if (a == 1) {
+      m = document.getElementById('m').innerHTML = "<img src = " + fb[0] + " width = 60 height = 60>";
+      s += 33;
+    }
+    else if (a == 0)
+      m = document.getElementById('m').innerHTML = "<img src = " + fb[1] + " width = 60 height = 60>";
+    else if (a == 3) {
+      n = document.getElementById('n').innerHTML = "<img src = " + fb[0] + " width = 60 height = 60>";
+      s += 33;
+    }
+    else if (a == 2)
+      n = document.getElementById('n').innerHTML = "<img src = " + fb[1] + " width = 60 height = 60>";
+    else if (a == 5) {
+      o = document.getElementById('o').innerHTML = "<img src = " + fb[0] + " width = 60 height = 60>";
+      s += 33;
+    }
+    else
+      o = document.getElementById('o').innerHTML = "<img src = " + fb[1] + " width = 60 height = 60>";
+    showS();
+  }
+  function showS(S) {
+    if (s <= 60)
+      S = document.getElementById('s').innerHTML = "<font size = 7 color = red face = 標楷體>得分 : <font color = green>" + s + "</font> 分 </font>";
+    else if (s <= 85)
+      S = document.getElementById('s').innerHTML = "<font size = 7 color = red face = 標楷體>得分 : <font color = blue>" + s + "</font> 分 </font>";
+    else
+      S = document.getElementById('s').innerHTML = "<font size = 7 color = red face = 標楷體>得分 : <font color = red>" + s + "</font> 分 </font>";
+  }
+  function dis(b) {
+    if (b == 1)
+      for (i = 0; i <= 3; i++)
+        document.getElementsByName("ip1")[i].disabled = true;
+    else if (b == 2)
+      for (i = 0; i <= 3; i++)
+        document.getElementsByName("ip2")[i].disabled = true;
+    else
+      for (i = 0; i <= 3; i++)
+        document.getElementsByName("ip3")[i].disabled = true;
+  }
+</script>
+ <body background = 20190515_130045.jpg style = "background-size: cover">
+  <div id = "a" style = "background-color: rgba(255, 255, 255, 0.6);">
+   <font size = "6" face = "標楷體">第1題. 請問圖中為何者生物？<br>
+    <img src = 20190515_125725.jpg width = 240 height = 135>
+    <input type = radio name = 'ip1' onclick = 'check(0);dis(1);'>公雞
+    <input type = radio name = 'ip1' onclick = 'check(1);dis(1);'>鴨子
+    <input type = radio name = 'ip1' onclick = 'check(0);dis(1);'>烏龜
+    <input type = radio name = 'ip1' onclick = 'check(0);dis(1);'>鴿子
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id = 'm'></span><br><br>
+   <font size = "6" face = "標楷體">第2題. 請問圖中為哪間圖書館？<br>
+    <img src = 20190515_130003.jpg width = 240 height = 135>
+    <input type = radio name = 'ip2' onclick = 'check(2);dis(2);'>台北圖書館
+    <input type = radio name = 'ip2' onclick = 'check(2);dis(2);'>新北圖書館
+    <input type = radio name = 'ip2' onclick = 'check(3);dis(2);'>北投圖書館
+    <input type = radio name = 'ip2' onclick = 'check(2);dis(2);'>北七圖書館
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id = 'n'></span><br><br>
+   <font size = "6" face = "標楷體">第3題. 請問圖中主要為何種概念？<br>
+    <img src = 20190515_130023.jpg width = 240 height = 135>
+    <input type = radio name = 'ip3' onclick = 'check(4);dis(3);'>樸素概念
+    <input type = radio name = 'ip3' onclick = 'check(4);dis(3);'>美化概念
+    <input type = radio name = 'ip3' onclick = 'check(4);dis(3);'>種樹概念
+    <input type = radio name = 'ip3' onclick = 'check(5);dis(3);'>綠化概念
+   </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id = 'o'></span><br><br>
+     <span id = 's'></span><br>
+   <center><input type = "button" onclick = "javascript:location.href = '0-index.html'" value = "返回首頁"></input></center>
+  </div>
+</body>
+</html>
